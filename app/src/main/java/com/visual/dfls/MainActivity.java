@@ -32,7 +32,6 @@ import static android.content.ContentValues.TAG;
 public class MainActivity extends AppCompatActivity {
 
     private static MainActivity _instance = null;
-    private static final int REQUEST_CAMERARESULT=201;
 
     private ActivityMainBinding binding;
 
@@ -44,17 +43,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(flag==0){
+        MainActivity._instance = this;
+
+        if(flag == 0){
             this.startService( new Intent( this, AppService.class ) );
             flag ++;
             requestCameraPermission();
-            //requestRecordAudioPermission();
         }
 
         //unlockScreen();
 
         initializeView();
-        MainActivity._instance = this;
     }
 
     public static MainActivity getInstance() {
@@ -139,13 +138,11 @@ public class MainActivity extends AppCompatActivity {
     private void requestCameraPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (this.checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                ///method to get Images
             }
             else {
                 if (shouldShowRequestPermissionRationale(Manifest.permission.CAMERA)) {
                     Toast.makeText(this, "Your Permission is needed to get access the camera", Toast.LENGTH_LONG).show();
                 }
-                //evala kai to audio
                 requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
                                 Manifest.permission.READ_EXTERNAL_STORAGE,
                                 Manifest.permission.CAMERA,
@@ -154,45 +151,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*private void requestRecordAudioPermission() {
-
-        //check API version, do nothing if API version < 23!
-        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        if (currentapiVersion > android.os.Build.VERSION_CODES.LOLLIPOP){
-
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-
-                // Should we show an explanation?
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
-
-                    // Show an expanation to the user *asynchronously* -- don't block
-                    // this thread waiting for the user's response! After the user
-                    // sees the explanation, try again to request the permission.
-
-                } else {
-                    // No explanation needed, we can request the permission.
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
-                }
-
-            }
-        }
-    }*/
 
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
-            case 1: {
-                // If request is cancelled, the result arrays are empty.
+            case 50: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
                     Log.d("Activity", "Granted!");
-
-                } else {
-
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
+                }
+                else {
                     Log.d("Activity", "Denied!");
                 }
                 return;
@@ -202,16 +169,14 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     private void unlockScreen(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1)
-        {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
             setShowWhenLocked(true);
             setTurnScreenOn(true);
             KeyguardManager keyguardManager = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
             if(keyguardManager!=null)
                 keyguardManager.requestDismissKeyguard(this, null);
         }
-        else
-        {
+        else {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON|
                     WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD|
                     WindowManager.LayoutParams.FLAG_SPLIT_TOUCH|
