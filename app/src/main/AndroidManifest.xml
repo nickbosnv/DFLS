@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dfls">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_digital_frontier"
+        android:label="Digital Frontier Line Softphone"
+        android:roundIcon="@mipmap/ic_launcher_digital_frontier_round"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.DFL"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait">
+
+        <activity
+            android:name="com.visual.dfls.MainActivity"
+            android:label="Digital Frontier Line Softphone"
+            android:theme="@style/Theme.DFL.NoActionBar"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.visual.dfls.CallActivity"
+            android:label="Digital Frontier Line Softphone"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.visual.dfls.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.visual.dfls.Registration"
+            android:label="Digital Frontier Line Softphone"
+            android:hardwareAccelerated="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.visual.dfls.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.visual.dfls.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.visual.dfls.IncomingCall"
+            android:label="Digital Frontier Line Softphone"
+            android:keepScreenOn="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.visual.dfls.CallActivity" />
+        </activity>
+
+        <service android:foregroundServiceType="location|camera|microphone"
+            android:name="com.visual.dfls.CallActivity"
+            tools:ignore="Instantiatable,WrongManifestParent" />
+        <service android:foregroundServiceType="location|camera|microphone"
+            android:name="com.visual.dfls.AppService"
+            tools:ignore="Instantiatable" />
+        <service android:name="dfls.sipservice.LSService"
+            tools:ignore="Instantiatable,MissingClass" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+    <uses-sdk android:minSdkVersion="9" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="true"/>
+    <uses-feature android:name="android.software.sip" android:required="true" />
+    <uses-feature android:name="android.software.sip.voip" android:required="true" />
+    <uses-feature android:name="android.hardware.sip.voip" android:required="true" />
+    <uses-feature android:name="android.hardware.wifi" android:required="true" />
+    <uses-feature android:name="android.hardware.microphone" android:required="true" />
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+
+</manifest>

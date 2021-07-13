@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/df_cyan"
+    tools:context="com.visual.dfls.Registration">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/good_times_rg"
+        android:text="SIP Registration"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/df_yellow"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="303dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:editable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-medium"
+        android:freezesText="true"
+        android:hint="Username"
+        android:textColor="@color/df_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/serverip"
+        android:layout_width="303dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:editable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-medium"
+        android:freezesText="true"
+        android:hint="Server IP"
+        android:textColor="@color/df_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:editable="true"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:fontFamily="sans-serif-medium"
+        android:freezesText="true"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@color/df_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverip" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/df_drawable_background_border"
+        android:fontFamily="@font/good_times_rg"
+        android:onClick="onClick"
+        android:text="Login"
+        android:textColor="@color/df_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="OnClick" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

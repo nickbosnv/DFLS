@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/df_cyan"
+    tools:context="com.visual.dfls.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dfl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/df_logo"
+            android:layout_marginTop="81dp"
+            android:fontFamily="@font/good_times_rg"
+            android:text="Digital Frontier"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/line_softphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dfl_text"
+            android:layout_marginTop="81dp"
+            android:fontFamily="@font/good_times_rg"
+            android:text="Line Softphone"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/df_logo"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="55dp"
+            android:adjustViewBounds="false"
+            app:srcCompat="@drawable/digital_frontier_oe_1" />
+
+        <TextView
+            android:id="@+id/sipLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_softphone"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/good_times_rg"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.DFL.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/df_yellow"
+            app:popupTheme="@style/Theme.DFL.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/makecall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/df_yellow"
+        app:srcCompat="@android:drawable/sym_action_call" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

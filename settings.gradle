@@ -1,0 +1,2 @@
+rootProject.name = "DFLS"
+include ':app'

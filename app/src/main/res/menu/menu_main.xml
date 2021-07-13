@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.dfl.MainActivity">
+    <item
+        android:id="@+id/sipLogin"
+        android:enabled="true"
+        android:orderInCategory="1"
+        android:title="SIP Login"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/sipLogout"
+        android:orderInCategory="2"
+        android:title="SIP Logout" />
+</menu>

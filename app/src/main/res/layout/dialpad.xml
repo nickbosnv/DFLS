@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/df_cyan"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_marginBottom="10dip"
+        android:cursorVisible="true"
+        android:editable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/good_times_rg"
+        android:freezesText="true"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textColor="@color/df_yellow"
+        android:textSize="33sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip">
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="2"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="3"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip">
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="4"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="5"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="6"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip">
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="7"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="8"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="9"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip">
+
+        <Button
+            android:id="@+id/asterisk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/frank_ruhl_libre_bold"
+            android:text="*"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/good_times_rg"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/hash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:fontFamily="@font/frank_ruhl_libre_bold"
+            android:text="#"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/dialButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:foreground="@android:drawable/stat_sys_phone_call"
+            android:foregroundGravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:foreground="@android:drawable/ic_input_delete"
+            android:foregroundGravity="center"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:foreground="@android:drawable/stat_sys_phone_call_on_hold"
+            android:foregroundGravity="center" />
+
+        <Button
+            android:id="@+id/forwardButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:foreground="@android:drawable/stat_sys_phone_call_forward"
+            android:foregroundGravity="center"
+            app:iconGravity="textStart"
+            app:iconTintMode="src_in" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:foreground="@drawable/end_call"
+            android:foregroundGravity="center"
+            android:freezesText="false" />
+
+        <Button
+            android:id="@+id/speaekerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/df_drawable_background_border"
+            android:foreground="@android:drawable/stat_sys_speakerphone"
+            android:foregroundGravity="center" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/callingstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="76dp"
+            android:fontFamily="@font/good_times_rg"
+            android:gravity="center"
+            android:textColor="@color/df_yellow"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>
