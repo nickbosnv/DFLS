@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             requestCameraPermission();
         }
 
-        unlockScreen();
+        //unlockScreen();
 
         initializeView();
     }
