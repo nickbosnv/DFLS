@@ -78,15 +78,16 @@ public class CallActivity extends Activity implements View.OnClickListener,
 
         activity = this;
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.dialpad);
-
-        lsVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         initUI();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private void initUI() {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.dialpad);
+
+        lsVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
         initializeViews();
         addNumberFormatting();
         setClickListeners();

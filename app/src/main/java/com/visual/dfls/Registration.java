@@ -35,12 +35,15 @@ public class Registration extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        loadLibraries();
+        initializeView();
+        initializeLocalProfile();
+    }
+
+    public void initializeView() {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.login_form);
-
-        System.loadLibrary("openh264");
-        System.loadLibrary("pjsua2");
-        System.out.println("Library loaded");
 
         login = (Button) findViewById(R.id.login);
 
@@ -51,8 +54,6 @@ public class Registration extends Activity implements View.OnClickListener {
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
 
         progressBar.setVisibility(View.INVISIBLE);
-
-        initializeLocalProfile();
     }
 
     public void initializeLocalProfile() {
@@ -97,6 +98,12 @@ public class Registration extends Activity implements View.OnClickListener {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
+    }
+
+    private void loadLibraries(){
+        System.loadLibrary("openh264");
+        System.loadLibrary("pjsua2");
+        System.out.println("Library loaded");
     }
 
 }

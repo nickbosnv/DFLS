@@ -82,7 +82,8 @@ public class IncomingCall extends Activity implements View.OnClickListener{
                     WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD|
                     WindowManager.LayoutParams.FLAG_SPLIT_TOUCH|
                     WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED|
-                    WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+                    WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON|
+                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
     }
 

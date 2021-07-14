@@ -23,8 +23,6 @@ public class LSAccountData extends Account{
     private LSService service;
     public static String callFrom;
     private Handler handler = new Handler();
-    private Context context;
-
 
     public LSAccountData(String username, String domain, String password){
         this.username = username;
@@ -38,7 +36,6 @@ public class LSAccountData extends Account{
         System.out.println("On registration state: " + prm.getCode() + " " + prm.getReason());
     }
 
-    @SuppressLint("WrongConstant")
     @Override
     public void onIncomingCall(OnIncomingCallParam prm) {
         LSCall call = new LSCall(LSService.data, prm.getCallId());
