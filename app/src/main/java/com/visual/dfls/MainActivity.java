@@ -56,16 +56,6 @@ public class MainActivity extends AppCompatActivity {
         initializeView();
     }
 
-    public static MainActivity getInstance() {
-        return _instance;
-    }
-
-    public void startNewActivity() {
-        Log.v(TAG, "in startNewActivity");
-        Intent intent = new Intent(this, IncomingCall.class);
-        this.startActivity(intent);
-    }
-
     private void initializeView(){
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -151,6 +141,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public static MainActivity getInstance() {
+        return _instance;
+    }
+
+    public void startNewActivity() {
+        Log.v(TAG, "in startNewActivity");
+        Intent intent = new Intent(this, IncomingCall.class);
+        this.startActivity(intent);
+    }
 
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
