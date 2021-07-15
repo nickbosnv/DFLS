@@ -1,6 +1,6 @@
 # Digital Frontier OE Line Softphone Application
 
-![Digita Frontier O.E. logo](https://github.com/nickbosnv/DFLS/blob/master/app/src/main/res/drawable/digital_frontier_oe_1.png)
+![Digital Frontier O.E. logo](https://github.com/nickbosnv/DFLS/blob/master/app/src/main/res/drawable/digital_frontier_oe_1.png)
 
 ## About
 
